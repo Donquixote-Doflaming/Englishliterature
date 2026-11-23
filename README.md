@@ -1,10 +1,6 @@
-# English Literature — the study wall
+# English Literature
 
-A single-page revision site built from **A Handbook on English Literature** —
-Sharif Hossain Ahmad Chowdhury, 13th edition, revised by Mohammad Abdul Latif
-(Confidence Research Work Ltd.) — for HSC, BCS and board candidates.
-The layout borrows a certain portfolio site's design language: oversized type,
-anchor nav, a wall of numbered squares, and eight switchable "editions".
+https://donquixote-doflaming.github.io/Englishliterature/
 
 ## Run it
 
