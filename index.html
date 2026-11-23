@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en" data-edition="kunsthalle">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>English Literature — the study wall</title>
+<meta name="description" content="A revision site for Sharif's English Literature (13th edition): periods, epithets, figures of speech, quotations and 298 past BCS / board MCQs." />
+<link rel="stylesheet" href="./styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2314130f'/%3E%3Ctext x='16' y='23' font-size='20' font-family='Georgia,serif' text-anchor='middle' fill='%23f4f1ea'%3E%C5%81%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+<noscript><div style="padding:40px;font:16px/1.5 Georgia,serif">This is a revision app: it needs JavaScript to deal the questions. The book's data itself lives in <code>site/data/</code> and reads fine as plain text.</div></noscript>
+<div class="grain" aria-hidden="true"></div>
+<div class="scan" aria-hidden="true"></div>
+<div class="stars" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="wordmark" href="#top"><span class="mk">Ś</span> <span>English&nbsp;Literature</span></a>
+  <nav class="nav" aria-label="Sections">
+    <a href="#periods">Periods</a>
+    <a href="#wall">The Wall</a>
+    <a href="#facts">Epithets</a>
+    <a href="#figures">Figures&nbsp;of&nbsp;Speech</a>
+    <a href="#quotes">Quotations</a>
+    <a href="#quiz">Quiz</a>
+  </nav>
+  <button class="edbtn" id="edbtn" type="button" title="Change the look of the whole site">
+    Edition: <strong id="edname">Kunsthalle</strong> <span class="edarrow">→</span>
+  </button>
+</header>
+
+<main id="top">
+
+  <!-- ── HERO ─────────────────────────────────────────────── -->
+  <section class="hero">
+    <p class="eyebrow">Sharif Hossain Ahmad Chowdhury · 13th edition · revised by Mohammad Abdul Latif</p>
+    <h1 class="bigtype">
+      <span class="l1">ENGLISH</span>
+      <span class="l2">LITERATURE<span class="cursor">_</span></span>
+      <span class="l3">for&nbsp;the&nbsp;paper<span class="dot">.</span></span>
+    </h1>
+    <div class="herogrid">
+      <p class="lede">
+        Eight periods, two hundred and two names, thirty-five figures of speech,
+        a wall of epithets — and every past question in the book, ready to be
+        answered, marked and argued with. HSC, BCS and board level.
+      </p>
+      <ul class="stats">
+        <li><b id="st-q">298</b><span>past questions</span></li>
+        <li><b id="st-a">202</b><span>names on the wall</span></li>
+        <li><b id="st-p">8</b><span>periods, dated</span></li>
+        <li><b id="st-f">35</b><span>figures of speech</span></li>
+      </ul>
+      <div class="herocta">
+        <a class="btn primary" href="#quiz">Start a quiz →</a>
+        <a class="btn" href="#wall">Walk the wall</a>
+        <a class="btn ghost" href="#figures">Flip the cards</a>
+      </div>
+    </div>
+    <p class="tagline">Quit talking. <em>Start revising.</em></p>
+  </section>
+
+  <!-- ── TICKER ───────────────────────────────────────────── -->
+  <div class="ticker" aria-hidden="true"><div class="track" id="ticker"></div></div>
+
+  <!-- ── PERIODS ──────────────────────────────────────────── -->
+  <section id="periods">
+    <div class="shead">
+      <h2><span class="num">01</span> The eight ages</h2>
+      <p>Every question in the book sits inside one of these spans. Learn the brackets first; the dates answer themselves.</p>
+    </div>
+    <div class="periods" id="periodgrid"></div>
+  </section>
+
+  <!-- ── THE WALL ─────────────────────────────────────────── -->
+  <section id="wall">
+    <div class="shead">
+      <h2><span class="num">02</span> The wall of names</h2>
+      <p>Two hundred and two writers, in the order the handbook meets them. Hover a square to light it, click to read the card. Stars = how often the paper asks.</p>
+    </div>
+    <div class="readout" id="readout"><span class="ro-name">your next favourite author</span><span class="ro-meta">hover the wall</span>
+      <button class="pill" id="staronly" type="button" style="margin-left:auto">only the ★★★★★ names</button></div>
+    <div class="chips" id="wallchips"></div>
+    <div class="wall" id="wallgrid"></div>
+    <aside class="sheet" id="sheet" hidden>
+      <button class="sheetclose" id="sheetclose" aria-label="Close">✕</button>
+      <div id="sheetbody"></div>
+    </aside>
+  </section>
+
+  <!-- ── EPITHETS ─────────────────────────────────────────── -->
+  <section id="facts">
+    <div class="shead">
+      <h2><span class="num">03</span> “Who is called …?”</h2>
+      <p>The father-of / first-of / star-of questions. Cover the right column with your hand, then check. 48 of them.</p>
+    </div>
+    <div class="chips" id="factchips"></div>
+    <div class="factgrid" id="factgrid"></div>
+    <button class="btn ghost" id="factshuffle" type="button">Shuffle the wall</button>
+  </section>
+
+  <!-- ── FIGURES OF SPEECH ────────────────────────────────── -->
+  <section id="figures">
+    <div class="shead">
+      <h2><span class="num">04</span> The top 35 figures of speech</h2>
+      <p>One card at a time: definition, a real line, and the thing examiners mix it up with. Flip with <kbd>space</kbd>, move with <kbd>←</kbd> <kbd>→</kbd>.</p>
+    </div>
+    <div class="flashwrap">
+      <div class="card" id="focard" tabindex="0"></div>
+      <div class="cardctl">
+        <button class="btn" id="foprev" type="button">← Prev</button>
+        <button class="btn primary" id="foflip" type="button">Flip</button>
+        <button class="btn" id="fonext" type="button">Next →</button>
+        <button class="btn ghost" id="foshuf" type="button">Shuffle</button>
+        <span class="cardpos" id="fopos"></span>
+      </div>
+      <div class="dots" id="fodots"></div>
+    </div>
+  </section>
+
+  <!-- ── QUOTATIONS ───────────────────────────────────────── -->
+  <section id="quotes">
+    <div class="shead">
+      <h2><span class="num">05</span> Lines worth stealing</h2>
+      <p>Quotations, with who said them and which age they belong to. The book prints these to be recognised, not recited — so read them out loud once.</p>
+    </div>
+    <div class="chips" id="quotechips"></div>
+    <div class="quotegrid" id="quotegrid"></div>
+  </section>
+
+  <!-- ── QUIZ ─────────────────────────────────────────────── -->
+  <section id="quiz">
+    <div class="shead">
+      <h2><span class="num">06</span> Past questions</h2>
+      <p>298 MCQs pulled from every “Previous Questions” block in the book, answers as printed. Wrong answers explain themselves.</p>
+    </div>
+    <div class="quizbar">
+      <div class="chips" id="quizchips"></div>
+      <div class="quizlen">
+        <label class="len">Length
+          <select id="qlen">
+            <option value="10">10</option>
+            <option value="20" selected>20</option>
+            <option value="40">40</option>
+            <option value="0">all</option>
+          </select>
+        </label>
+        <button class="btn primary" id="qstart" type="button">Deal me a set</button>
+        <button class="btn ghost" id="qreset" type="button">Reset</button>
+      </div>
+    </div>
+    <div class="quizmeta">
+      <span class="score">score <b id="qscore">0</b>/<span id="qdone">0</span></span>
+      <span class="streak">streak <b id="qstreak">0</b></span>
+      <span class="best">best <b id="qbest">0%</b></span>
+      <span class="left">left <b id="qleft">0</b></span>
+      <div class="qbar"><i id="qfill"></i></div>
+    </div>
+    <ol class="qlist" id="qlist"></ol>
+    <div class="qempty" id="qempty">
+      <p>Nothing dealt yet. Pick a topic, or take the whole bank — then answer with the mouse or the <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd> keys.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="fgrid">
+    <div>
+      <h3>Eight editions</h3>
+      <p>A nod to a certain portfolio site: the same front page, eight visual moods. Press <kbd>E</kbd> to cycle. Your revision data lives in this browser only.</p>
+    </div>
+  </div>
+  <p class="fine">Made in a sandbox · <span id="foot-count">298</span> questions · no accounts, no tracking, no syllabus anxiety</p>
+</footer>
+
+<div class="edpanel" id="edpanel" hidden>
+  <h3>Choose an edition</h3>
+  <div class="eds" id="edlist"></div>
+  <p class="ednote">The content never changes. Only the room it hangs in.</p>
+</div>
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>
