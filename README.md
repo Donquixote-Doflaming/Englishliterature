@@ -1,6 +1,6 @@
 # English Literature
 
-[lINK](https://donquixote-doflaming.github.io/Englishliterature/)
+[LINK](https://donquixote-doflaming.github.io/Englishliterature/)
 ## Run it
 
 ```sh
