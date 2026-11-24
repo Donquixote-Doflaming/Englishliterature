@@ -132,7 +132,7 @@ main,footer{position:relative;z-index:1}
 main{max-width:var(--maxw);margin:0 auto;padding:0 clamp(16px,4vw,44px)}
 section{padding:clamp(56px,9vw,116px) 0;border-bottom:1px solid var(--rule);scroll-margin-top:64px}
 .hero{padding-top:clamp(40px,7vw,90px)}
-.eyebrow{font:500 12px/1.4 var(--font-m);letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin:0 0 clamp(20px,4vw,44px)}
+.byline{font:500 12px/1.4 var(--font-m);letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin:clamp(9px,1.4vw,18px) 0 clamp(2px,.5vw,6px)}
 .bigtype{line-height:.84;letter-spacing:-.045em;font-size:clamp(52px,12.4vw,190px);text-transform:uppercase;animation:var(--flick)}
 .bigtype span{display:block}
 .bigtype .l2{color:var(--accent)}

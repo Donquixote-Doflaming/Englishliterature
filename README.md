@@ -1,6 +1,11 @@
-# English Literature
+# English Literature — the study wall
 
-[LINK](https://donquixote-doflaming.github.io/Englishliterature/)
+A single-page revision site built from **A Handbook on English Literature** —
+Sharif Hossain Ahmad Chowdhury, 13th edition, revised by Mohammad Abdul Latif
+(Confidence Research Work Ltd.) — for HSC, BCS and board candidates.
+The layout borrows a certain portfolio site's design language: oversized type,
+anchor nav, a wall of numbered squares, and eight switchable "editions".
+
 ## Run it
 
 ```sh
@@ -22,7 +27,7 @@ will not load the data.
 | 03 "Who is called …?" | `FACTS` (48) | the father-of / first-of epithets, cover-and-check |
 | 04 Figures of speech | `FIGURES` (35) | flip cards: definition, a real line, the usual trap |
 | 05 Lines worth stealing | `QUOTES` (97) | quotations with speaker and age |
-| 06 Past questions | `MCQS` (298) | topic chips, deal 10/20/40/all, instant marking against the book's key, exam-year badge, score + streak + best % in `localStorage` |
+| 06 Past questions | `MCQS` (383) | topic chips, deal 10/20/40/all, instant marking against the book's key, exam-year badge, score + streak + best % in `localStorage` |
 
 One period filter (wall chips, or a "filter the wall by this age" button on any period card)
 drives the wall, the epithets and the quotations at once. `E` cycles the eight editions;

@@ -258,7 +258,7 @@ function renderFacts() {
       const f = FACTS[i];
       return `<button class="fact" data-i="${i}" type="button" style="--pc:${inkOf(f.p)}">
         <span class="q">${esc(f.k)}</span><span class="a">${esc(f.v)}</span>
-        ${f.note ? `<span class="note">${esc(f.note)} <b style="color:${inkOf(f.p)}">${esc(pName(f.p))}</b></span>` : ""}
+        ${f.note ? `<span class="note">${esc(f.note)}${f.p ? ` <b style="color:${inkOf(f.p)}">${esc(pName(f.p))}</b>` : ""}</span>` : ""}
       </button>`;
     })
     .join("");
